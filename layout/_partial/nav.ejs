@@ -22,7 +22,7 @@
                     <span><%= __('nav.tags') %></span>
                 </a>
             </li>
-            <li <% if(is_current('archives')){ %> <%- "class=active" %> <% } %>>
+            <li <% if(is_current('archive')){ %> <%- "class=active" %> <% } %>>
                 <a href="<%= url_for(config.archive_dir) %>">
                     <i class="iconfont icon-guidang2"></i>
                     <span><%= __('nav.archives') %></span>

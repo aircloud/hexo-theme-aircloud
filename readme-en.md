@@ -13,7 +13,7 @@ In addition, the main functions of this theme are:
 
 
 * Global search support and auto-highlight search content.
-* Comment for each blog, currently [gitment](https://imsun.net/posts/gitment-introduction/)is used, more options are considered.
+* Comment for each blog, currently [gitment](https://imsun.net/posts/gitment-introduction/) is used, more options are considered.
 * Visit statistics(overall UV,PV, single page PV)
 * Language switching ability, currently supports Chinese and English
 
@@ -23,7 +23,7 @@ Same as other hexo blog topics, simply clone or download the project, copy and p
 
 Specific _config.yml custom configuration, it is recommended to refer to [DEMO] (https://github.com/aircloud/hexo-aircloud-blog) for configuration
 
-## some precautions
+## Some precautions
 
 Due to some history issues of the hexo, in order to avoid trouble when in the use process, it is recommended that users follow some rules in the use process:
 
