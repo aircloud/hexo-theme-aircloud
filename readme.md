@@ -1,8 +1,8 @@
-### Hexo-Theme-AirCloud: 一个简洁轻量的 hexo 博客主题
+## Hexo-Theme-AirCloud: 一个简洁轻量的 hexo 博客主题
 
-> [English Documnet](./readme-en.md) | [预览地址](http://niexiaotao.cn/)
+> [English Document](./readme-en.md) | [预览地址](http://niexiaotao.cn/)
 
-### 功能简介
+## 功能简介
 
 Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心放在博文本身，因此：
 
@@ -17,14 +17,14 @@ Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心
 * 访问量统计（总体UV、PV，单页PV）
 * 语言切换能力，目前支持中文和英文
 
-### 使用方式
+## 使用方式
 
 同其他博客主题使用方式相同，直接 clone 或者下载本项目，复制粘贴到 themes 文件夹下即可。
 
 具体的 _config.yml 自定义配置，建议参考 [DEMO](https://github.com/aircloud/hexo-aircloud-blog) 进行配置
 
 
-### 一些注意事项
+## 一些注意事项
 
 由于一些hexo的历史遗留问题等，为了避免给用户在使用过程中带来太多麻烦(比如需要改动主题代码甚至hexo源码)，建议用户使用过程中遵循一些规范：
 
