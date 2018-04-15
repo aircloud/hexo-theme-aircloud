@@ -1,0 +1,96 @@
+
+@import "variables";
+@import "common";
+
+.index-about{
+  i {
+    font-size: 15px;
+    font-family: "italic" !important;
+    font-weight: 300;
+    color: #444444;
+  }
+  text-align: center;
+  width: 100%;
+  margin-top: 45px;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: showBlock @transitionTime * 4 forwards;
+}
+
+
+.index-about-mobile{
+  display: none;
+}
+
+.index-container{
+  justify-content: center;
+  height: max-content;
+  position: relative;
+  width: 1024px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  //min-height: calc(100vh - 190px);
+  .index-left{
+    width: 240px;
+  }
+  .index-middle{
+    max-width: 784px;
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 1180px){
+  .index-container {
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0 40px 0 10px;
+    display: flex;
+    flex-direction: row;
+    //min-height: calc(100vh - 190px);
+    .index-left {
+      width: 180px;
+    }
+    .index-middle {
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 680px){
+  .index-container {
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px 0 25px;
+    min-height: 0;
+    .index-left {
+      width: 100%;
+    }
+    .index-middle {
+      flex: 1;
+    }
+  }
+
+  .index-about{
+    display: none;
+  }
+
+  .index-about-mobile{
+    display: block;
+    i {
+      font-size: 15px;
+      font-family: "italic" !important;
+      font-weight: 300;
+      color: #444444;
+    }
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom:40px;
+  }
+}

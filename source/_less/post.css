@@ -1,0 +1,125 @@
+/*varibles*/
+.post-container {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+}
+.post-container .post-title {
+  width: 100%;
+  text-align: center;
+  line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #101010;
+  font-size: 20px;
+  font-weight: 300;
+}
+.post-container .post-meta {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.post-container .post-meta span,
+.post-container .post-meta a {
+  font-weight: 300;
+  color: #999999;
+  font-size: 13px;
+  text-decoration: none;
+}
+.post-container .post-meta .attr {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.post-content {
+  line-height: 20px;
+  font-size: 15px;
+  text-indent: 2em;
+  color: #333333;
+  font-weight: 300;
+}
+.post-content blockquote {
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-left: 0;
+  padding-right: 0;
+}
+.post-content blockquote p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #666666;
+}
+.post-content a {
+  text-decoration: none;
+  color: #4990E2;
+}
+.post-content p {
+  color: #4a4a4a;
+  font-size: 14px;
+  line-height: 30px;
+  text-indent: 2em;
+  letter-spacing: 1px;
+}
+.post-content p img {
+  width: 80%;
+}
+.post-content ul,
+.post-content ol {
+  padding-left: 2em;
+}
+.post-content ul li,
+.post-content ol li {
+  list-style: none;
+  font-size: 15px;
+  line-height: 30px;
+  color: #4a4a4a;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.post-content ul li:before,
+.post-content ol li:before {
+  content: '• ';
+}
+.post-content pre {
+  text-indent: 0;
+  padding: 10px;
+}
+.post-content pre code {
+  color: white;
+  line-height: 175%;
+}
+.post-content h1 {
+  color: #3d3d3d;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.post-content h2 {
+  color: #3d3d3d;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.post-content h3 {
+  color: #3d3d3d;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.post-content h4 {
+  color: #3d3d3d;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.post-content h5 {
+  color: #3d3d3d;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.post-content h6 {
+  color: #3d3d3d;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#comment-container {
+  text-indent: 0;
+}

@@ -1,0 +1,91 @@
+@import "variables";
+
+*{
+  font-family: "italic",Helvetica,Arial,"Heiti SC","Microsoft YaHei";
+  //font-family: "Montserrat", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, sans-serif;
+}
+
+body,html{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-left: calc(100vw - 100%) !important;
+  // avoid the effect of the scrollbar's width
+}
+
+.red{
+  color: red
+}
+.hide{
+  display: none !important;
+}
+
+.show-block{
+  display: block !important;
+}
+
+.show-block{
+  animation: showBlock @transitionTime forwards;
+  display: block !important;
+}
+
+@keyframes showBlock {
+  from{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hide-block{
+  display: block !important;
+  animation: hideBlock @transitionTime forwards;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes hideBlock {
+  from{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+    display: none;
+  }
+}
+
+.show-flex-fade{
+  animation: showFade @transitionTime forwards;
+  display: flex !important;
+}
+
+.hide-flex-fade{
+  animation: hideFade @transitionTime forwards;
+}
+
+@keyframes showFade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes hideFade {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+    display: none !important;
+  }
+}
+

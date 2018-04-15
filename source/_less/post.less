@@ -1,0 +1,139 @@
+@import "variables";
+
+.post-container{
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  .post-title{
+    width: 100%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #101010;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .post-meta{
+    text-align: center;
+    margin-top: 0;
+    span,a{
+      font-weight: 300;
+      color: #999999;
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .attr{
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    //.attr:not(:last-child)::after{
+    //  content: "|"
+    //}
+    margin-bottom: 20px;
+  }
+}
+
+.post-content{
+  line-height: 20px;
+  font-size: 15px;
+  text-indent: 2em;
+  color: #333333;
+  font-weight: 300;
+
+  blockquote{
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-left: 0;
+    padding-right: 0;
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: #666666;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: @link-color;
+  }
+  p {
+    color: @main-font-color;
+    font-size: 14px;
+    line-height: 30px;
+    text-indent: 2em;
+    letter-spacing: 1px;
+    img {
+      width: 80%
+    }
+  }
+  ul,ol{
+    padding-left: 2em;
+
+    li{
+      list-style: none;
+      &:before{
+        content: '• '
+      }
+      font-size: 15px;
+      line-height: 30px;
+      color: @main-font-color;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+  }
+
+  pre{
+    text-indent: 0;
+    padding: 10px;
+    //overflow: scroll;
+    //background-color: @back-dark-grey;
+    code{
+      color: white;
+      line-height: 175%;
+    }
+  }
+
+  h1{
+    color:@main-font-color-dark;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h2{
+    color:@main-font-color-dark;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h3{
+    color:@main-font-color-dark;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h4{
+    color:@main-font-color-dark;
+    margin-top: 20px;
+    margin-bottom:20px;
+  }
+
+  h5{
+    color:@main-font-color-dark;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h6{
+    color:@main-font-color-dark;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+#comment-container{
+  text-indent:0
+}
+

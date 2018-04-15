@@ -1,0 +1,58 @@
+@import "variables";
+
+.toc-article{
+
+  width: 240px;
+
+  .toc-title{
+  }
+  ol{
+    padding-left: 10px;
+    cursor: pointer;
+    font-size: 0;
+  }
+  li{
+    font-size: 0;
+    box-sizing: border-box;
+    border-left: 2px solid #cccccc;
+    list-style: none;
+    padding-left: 10px;
+    a{
+      display: block;
+      line-height: 20px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #999999;
+      font-size: 14px;
+    }
+  }
+  li.active{
+    border-left: 2px solid @link-color;
+    &>a {
+      color: @link-color;
+    }
+  }
+  li:hover{
+    border-left: 2px solid @link-color;
+    &>a {
+      color: @link-color;
+    }
+  }
+  &>ol>li{
+    border-left: none !important;
+  }
+}
+
+.toc-fixed{
+  position: fixed;
+  top:10px;
+  width: 240px;
+}
+
+@media screen and (max-width: 1180px){
+
+  .toc-article{
+    display: none;
+  }
+
+}

@@ -1,0 +1,19 @@
+nav:
+  home: HOME
+  tags: TAGS
+  archives: ARCHIVES
+  about: ABOUT
+  search: SEARCH
+#
+#post:
+#  postTime: 发布于
+#  tags: 标签
+#  visit: 访问
+post:
+  postTime: Post
+  tags: Tags
+  visit: Visit
+  donate: donate
+
+search:
+  search: search

@@ -1,0 +1,80 @@
+
+@import "variables";
+
+.tags{
+  line-height: 30px;
+  a{
+    text-decoration: none;
+    color: #999999;
+    margin-right: 15px;
+  }
+  a:hover{
+    color: #4a4a4a;
+  }
+  a::before{
+    content:"#"
+  }
+  margin-bottom: 25px;
+}
+
+.one-tag-list{
+  margin-bottom: 25px;
+  .fa-tag{
+    margin-bottom: 15px;
+    display: block;
+    color: #999999;
+  }
+  .post-preview{
+    padding-left: 2em;
+    a{
+      cursor: pointer;
+      text-decoration: none;
+      .post-title{
+        margin-bottom: 5px;
+        line-height: 20px;
+        cursor: pointer;
+        margin-top: 0;
+        color: #101010;
+        font-size: 18px;
+        font-weight: 300;
+        transition: color @transitionTime;
+      }
+      .post-title:hover{
+        color: @link-color;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 680px) {
+  .one-tag-list{
+    margin-bottom: 25px;
+    .fa-tag{
+      margin-bottom: 15px;
+      display: block;
+      color: #999999;
+    }
+    .post-preview{
+      padding-left: 2em;
+      a{
+        cursor: pointer;
+        text-decoration: none;
+        .post-title{
+          font-size: 14px;
+          font-weight: 300;
+          text-decoration: none;
+          line-height: 20px;
+          color: #4a4a4a;
+          margin-bottom: 5px;
+          cursor: pointer;
+          margin-top: 0;
+          transition: color @transitionTime;
+        }
+        .post-title:hover{
+          color: @link-color;
+        }
+      }
+    }
+  }
+}

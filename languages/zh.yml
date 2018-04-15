@@ -1,0 +1,16 @@
+nav:
+  home: 主页
+  tags: 标签
+  archives: 存档
+  about: 关于
+  search: 搜索
+
+post:
+  postTime: 发布于
+  tags: 标签
+  visit: 访问
+  donate: 赞赏
+
+search:
+  search: 搜索
+

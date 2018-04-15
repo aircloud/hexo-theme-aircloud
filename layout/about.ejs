@@ -1,0 +1,9 @@
+
+<div class="post-content">
+    <%-page.content%>
+    <% if(config.donate){%>
+        <%- partial('_partial/donate', null, {cache: false}) %>
+    <% } %>
+    <div id="comment-container">
+    </div>
+</div>
