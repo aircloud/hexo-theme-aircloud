@@ -34,12 +34,14 @@
                     <span><%= __('nav.about') %></span>
                 </a>
             </li>
+            <%if(config.search && config.search.path){%>
             <li>
                 <a id="search">
                     <i class="iconfont icon-sousuo1"></i>
                     <span><%= __('nav.search') %></span>
                 </a>
             </li>
+            <% } %>
         </ul>
     </div>
     <%

@@ -36,14 +36,14 @@
 
 <script>
     // We expose some of the variables needed by the front end
-    window.hexo_search_path = "<%- config.search.path %>"
+    window.hexo_search_path = "<%- config.search ? config.search.path : ""%>"
     window.hexo_root = "<%- config.root %>"
     window.isPost = <%- is_post() %>
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <%- js('js/index.js') %>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<%if(is_post() && config.comment){%>
+<%if( (is_post() || is_current('about')) && config.comment){%>
 <%- js('js/gitment.js') %>
 <script>
     var gitment = new Gitment({
