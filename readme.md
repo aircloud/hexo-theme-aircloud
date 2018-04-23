@@ -19,10 +19,58 @@ Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心
 
 ## 使用方式
 
+**建议：参考 [DEMO](https://github.com/aircloud/hexo-aircloud-blog) 进行配置，尤其是 _config.yml 部分，否则可能会造成功能缺失**
+
 同其他博客主题使用方式相同，直接 clone 或者下载本项目，复制粘贴到 themes 文件夹下即可。
 
-具体的 _config.yml 自定义配置，建议参考 [DEMO](https://github.com/aircloud/hexo-aircloud-blog) 进行配置
+具体的 _config.yml 自定义配置，请参考[DEMO](https://github.com/aircloud/hexo-aircloud-blog)。
 
+### 部分重点功能适配
+
+#### 搜索功能
+
+为了使用搜索功能，首先需要安装下列插件：
+
+```shell
+npm i hexo-generator-search --save
+```
+
+然后在 _config.yml 中进行配置，可以参考如下配置：
+
+```
+search:
+  path: search.json
+  field: post
+```
+
+#### `标签`页面 & `关于`页面
+
+如果是新项目，默认是没有`标签`页面和`关于`页面的，需要在`source`文件夹下建立`tags`文件夹和`about`文件夹。
+
+其中`tags`文件夹中新建`index.md`并写入：
+
+```
+---
+layout: "tags"
+title: "Tags"
+---
+```
+
+`about`文件夹下`index.md`为一篇支持 markdown 格式的文件，需要在开头添加：
+
+
+```
+---
+layout: "about"
+title: "About"
+date: 2016-04-21 04:48:33
+comments: true
+---
+```
+
+#### 评论功能
+
+建议先在[gitment](https://imsun.net/posts/gitment-introduction/)进行了解，然后参考[DEMO](https://github.com/aircloud/hexo-aircloud-blog)进行配置。
 
 ## 一些注意事项
 

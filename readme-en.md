@@ -21,7 +21,7 @@ In addition, the main functions of this theme are:
 
 Same as other hexo blog topics, simply clone or download the project, copy and paste it into the themes folder.
 
-Specific _config.yml custom configuration, it is recommended to refer to [DEMO] (https://github.com/aircloud/hexo-aircloud-blog) for configuration
+Specific _config.yml custom configuration, **it is recommended to refer to [DEMO] (https://github.com/aircloud/hexo-aircloud-blog) for configuration**
 
 ## Some precautions
 
