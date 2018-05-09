@@ -1158,6 +1158,9 @@ pre .javascript .function {
   color: #999999;
   font-size: 14px;
 }
+.toc-article li a span {
+  word-break: break-all;
+}
 .toc-article li.active {
   border-left: 2px solid #4990E2;
 }
