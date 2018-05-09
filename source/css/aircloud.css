@@ -1186,3 +1186,6 @@ pre .javascript .function {
     display: none;
   }
 }
+.gitment-comment p {
+  text-indent: 0;
+}
