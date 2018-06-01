@@ -238,7 +238,7 @@ var tocToTop = getDistanceOfLeft(toc).top;
 if(window.isPost){
     var result = []
 
-    let nameSet = new Set();
+    var nameSet = new Set();
 
     if(!toc || !toc.children || !toc.children[0]){
         // do nothing
@@ -291,7 +291,8 @@ if(window.isPost){
         console.log("result:", result)
 
         function reLayout() {
-            if (tocToTop <= document.documentElement.scrollTop + 10) {
+            let scrollToTop = document.documentElement.scrollTop || window.pageYOffset // Safari is special
+            if (tocToTop <= scrollToTop + 10) {
                 if (!toc.classList.contains('toc-fixed'))
                     toc.classList.add('toc-fixed')
             } else {
