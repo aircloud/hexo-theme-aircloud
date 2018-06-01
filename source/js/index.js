@@ -292,6 +292,12 @@ if(window.isPost){
 
         function reLayout() {
             let scrollToTop = document.documentElement.scrollTop || window.pageYOffset // Safari is special
+            if(tocToTop === 0) {
+                // Fix bug that when resize window the toc layout may be wrong
+                toc = document.getElementById('toc')
+                toc.classList.remove('toc-fixed')
+                tocToTop = getDistanceOfLeft(toc).top;
+            }
             if (tocToTop <= scrollToTop + 10) {
                 if (!toc.classList.contains('toc-fixed'))
                     toc.classList.add('toc-fixed')
@@ -306,7 +312,7 @@ if(window.isPost){
             for (let item of nameArray) {
                 let dom = document.getElementById(item) || document.getElementById(item.replace(/\s/g, ''))
                 if (!dom) continue
-                let toTop = getDistanceOfLeft(dom).top - document.documentElement.scrollTop;
+                let toTop = getDistanceOfLeft(dom).top - scrollToTop;
 
                 if (Math.abs(toTop) < minTop) {
                     minTop = Math.abs(toTop)
