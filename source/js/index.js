@@ -23,7 +23,6 @@ window.onresize = () => {
 const navToggle = document.getElementById('site-nav-toggle');
 navToggle.addEventListener('click', () => {
     let aboutContent = document.getElementById('nav-content')
-    console.log("aboutContent:",aboutContent.classList)
     if (!aboutContent.classList.contains('show-block')) {
         aboutContent.classList.add('show-block');
         aboutContent.classList.remove('hide-block')
@@ -250,16 +249,14 @@ if(window.isPost){
             function getArrayFromOl(ol) {
                 let result = []
 
-                let escape = function (item) {
-                    return item.replace(/<[^>]+>/g, "").replace(/^\s\s*/, '').replace(/\s\s*$/, '').replace(/[\. ]/g, '-')
-                }
+                // let escape = function (item) {
+                //     return item.replace(/<[^>]+>/g, "").replace(/^\s\s*/, '').replace(/\s\s*$/, '').replace(/[\. _]/g, '-')
+                // }
 
                 ol.forEach((item) => {
-                    console.log('nameSet:', nameSet)
                     if (item.children.length === 1) {
                         // TODO: need change
-                        let value = escape(item.children[0].innerHTML);
-                        // console.log("value:", value)
+                        let value = item.children[0].getAttribute('href').replace(/^#/,"")
                         result.push({
                             value: [value],
                             dom: item
@@ -268,9 +265,9 @@ if(window.isPost){
                     }
                     else {
                         let concatArray = getArrayFromOl(Array.from(item.children[1].children))
-                        nameSet.add(escape(item.children[0].innerHTML))
+                        nameSet.add(item.children[0].getAttribute('href').replace(/^#/,""))
                         result.push({
-                            value: [escape(item.children[0].innerHTML)].concat(concatArray.reduce((p, n) => {
+                            value: [item.children[0].getAttribute('href').replace(/^#/,"")].concat(concatArray.reduce((p, n) => {
                                 p = p.concat(n.value)
                                 return p;
                             }, [])),
@@ -286,9 +283,6 @@ if(window.isPost){
         }
 
         var nameArray = Array.from(nameSet)
-
-        console.log("nameArray:", nameArray)
-        console.log("result:", result)
 
         function reLayout() {
             let scrollToTop = document.documentElement.scrollTop || window.pageYOffset // Safari is special
@@ -356,8 +350,6 @@ if(donateButton) {
             donateImgContainer.classList.add('hide')
         }
     })
-
-    console.log("donateImg.dataset",donateImg.dataset)
 
     donateImg.src = donateImg.dataset.src
 }
