@@ -70,7 +70,20 @@ comments: true
 
 #### 评论功能
 
-建议先在[gitment](https://imsun.net/posts/gitment-introduction/)进行了解，然后参考[DEMO](https://github.com/aircloud/hexo-aircloud-blog)进行配置。
+建议先在[gitment](https://imsun.net/posts/gitment-introduction/)进行了解，然后参考[DEMO](https://github.com/aircloud/hexo-aircloud-blog)进行配置，其中一些相关项目如下：
+
+```
+comment:
+  type: gitment
+  id: your-id-created-by-https://github.com/settings/applications/new
+  secret: your-secret-created-by-https://github.com/settings/applications/new
+  owner: aircloud
+  repo: hexo-aircloud-blog
+```
+
+#### favicon 的配置
+
+项目的 favicon 默认在你的博客根目录的 `/source/img` 下面，在 `/source/img` 下面添加 favicon.ico 即可，不要添加在主题文件夹内。
 
 ## 一些注意事项
 
