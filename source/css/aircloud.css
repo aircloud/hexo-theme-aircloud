@@ -724,6 +724,7 @@ body {
   margin: auto;
   display: flex;
   flex-direction: row;
+  background-color: white;
 }
 .index-container .index-left {
   width: 240px;
