@@ -11,7 +11,7 @@
     <div class="contents" id="nav-content">
         <ul>
             <li <% if(is_home()){ %> <%- "class=active" %> <% } %>>
-                <a href="<%= url_for(config.root) %>">
+                <a href="<%= url_for(config.home_dir || '/') %>">
                     <i class="iconfont icon-shouye1"></i>
                     <span><%= __('nav.home') %></span>
                 </a>
