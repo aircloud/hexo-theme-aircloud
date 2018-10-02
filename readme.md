@@ -29,7 +29,7 @@ Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心
     * [`标签`页面 & `关于`页面](https://github.com/aircloud/hexo-theme-aircloud#%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2--%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2)
     * [评论功能](https://github.com/aircloud/hexo-theme-aircloud#%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD)
     * [favicon 的配置](https://github.com/aircloud/hexo-theme-aircloud#%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2--%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2)
-    * [底部自定义]()
+    * [底部自定义](https://github.com/aircloud/hexo-theme-aircloud#%E5%BA%95%E9%83%A8%E8%87%AA%E5%AE%9A%E4%B9%89)
 * [高级自定义](https://github.com/aircloud/hexo-theme-aircloud#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B)
     * [首行缩进](https://github.com/aircloud/hexo-theme-aircloud#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B)
 * [常见问题](https://github.com/aircloud/hexo-theme-aircloud#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
@@ -106,7 +106,11 @@ comment:
 
 #### disqus
 
-disqus 是一个使用比较广泛的评论系统，我们需要先在[官方网站](https://disqus.com)注册一个账号，登录后，点击首页的 GET STARTED 按钮，之后选择 I want to install Disqus on my site 选项，填写相关内容，值得注意的是，`Website Name` 需要全网唯一，而且，一般情况，假设你的 `Website Name` 填写的是 example，那么下文 `script` 字段就可以写 `'https://example.disqus.com/embed.js'`。当然，你也可以在下一步 -> 选择 basic 免费套餐 -> 选择最后的 "I don't see my platform listed, installed manually with universal code" -> 找到代码中的 `s.src = 'https://xxxx.disqus.com/embed.js';
+disqus 是一个使用比较广泛的评论系统，我们需要先在[官方网站](https://disqus.com)注册一个账号。
+
+登录后，点击首页的 GET STARTED 按钮，之后选择 I want to install Disqus on my site 选项，填写相关内容，值得注意的是，`Website Name` 需要全网唯一，而且，一般情况，假设你的 `Website Name` 填写的是 example，那么下文 `script` 字段就可以写 `'https://example.disqus.com/embed.js'`。
+
+当然，你也可以在下一步 -> 选择 basic 免费套餐 -> 选择最后的 "I don't see my platform listed, installed manually with universal code" -> 找到代码中的 `s.src = 'https://xxxx.disqus.com/embed.js';
 ` , 从而找到 script 地址。(无需插入 disqus 给出的脚本，只需按照这里的说明配置即可)
 
 之后，你需要在 `_config.yml` 中配置如下内容：
