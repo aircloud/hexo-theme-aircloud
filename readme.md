@@ -23,17 +23,17 @@ Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心
 
 注意，如果你不按照"功能适配"部分的内容进行操作，可能会导致相关提及的功能无法正常使用。
 
-* [基本使用]()
-* [功能适配]()
+* [基本使用](https://github.com/aircloud/hexo-theme-aircloud#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8)
+* [功能适配](https://github.com/aircloud/hexo-theme-aircloud#%E5%8A%9F%E8%83%BD%E9%80%82%E9%85%8D)
     * [搜索功能](https://github.com/aircloud/hexo-theme-aircloud#%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD)
+    * [`标签`页面 & `关于`页面](https://github.com/aircloud/hexo-theme-aircloud#%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2--%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2)
     * [评论功能](https://github.com/aircloud/hexo-theme-aircloud#%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD)
-    * [`标签`页面 & `关于`页面]()
-    * [favicon 的配置]()
-* [高级自定义]()
-    * [首行缩进]()
-* [常见问题]()
-    * [如何取消赞赏功能？]()
-* [一些注意事项]()    
+    * [favicon 的配置](https://github.com/aircloud/hexo-theme-aircloud#%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2--%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2)
+* [高级自定义](https://github.com/aircloud/hexo-theme-aircloud#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B)
+    * [首行缩进](https://github.com/aircloud/hexo-theme-aircloud#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B)
+* [常见问题](https://github.com/aircloud/hexo-theme-aircloud#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+    * [如何取消赞赏功能？](https://github.com/aircloud/hexo-theme-aircloud#%E5%A6%82%E4%BD%95%E5%8F%96%E6%B6%88%E8%B5%9E%E8%B5%8F%E5%8A%9F%E8%83%BD)
+* [一些注意事项](https://github.com/aircloud/hexo-theme-aircloud#%E4%B8%80%E4%BA%9B%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)    
 
 ## 基本使用    
 
