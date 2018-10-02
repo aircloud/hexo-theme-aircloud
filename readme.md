@@ -123,6 +123,8 @@ comment:
 
 当然，你也可以配置`url` 和 `identifier`， 但是这个就属于高级内容了，对于我们一般的 hexo 博客网站来说必要性不大，如果你需要配置这些内容，可能你已经是一个高级玩家了，可以在 `themes/aircloud/layout/layout.ejs` 的相关代码的基础上进行改动。
 
+>TODO: 目前，直接嵌入 disqus 的代码可能会加载失败，你也可以考虑将相关代码放在自己的博客下引入。
+
 ### favicon 的配置
 
 项目的 favicon 默认在你的博客根目录的 `/source/img` 下面，在 `/source/img` 下面添加 favicon.ico 即可，不要添加在主题文件夹内。
