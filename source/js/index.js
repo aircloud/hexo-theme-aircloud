@@ -16,7 +16,9 @@ window.onresize = () => {
     if(window.isPost){
         reLayout()
     }
-}
+
+    reHeightToc();
+};
 
 // Nav switch function on mobile
 /*****************************************************************************/
@@ -233,6 +235,15 @@ function getDistanceOfLeft(obj) {
 var toc = document.getElementById('toc')
 
 var tocToTop = getDistanceOfLeft(toc).top;
+
+function reHeightToc(){
+    if(toc) { // resize toc height
+        toc.style.height = ( document.documentElement.clientHeight - 10 ) + 'px';
+        toc.style.overflowY = 'scroll';
+    }
+}
+
+reHeightToc();
 
 if(window.isPost){
     var result = []

@@ -1,5 +1,7 @@
 ## Hexo-Theme-AirCloud: A light and clean hexo template
 
+note: The English version of the documentation is waiting for synchronization from the chinese version.
+
 > [中文文档](./readme.md) | [LIVE PRIVIEW](http://niexiaotao.cn/)
 
 ## Introduction

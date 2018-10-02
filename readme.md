@@ -17,7 +17,25 @@ Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心
 * 访问量统计（总体UV、PV，单页PV）
 * 语言切换能力，目前支持中文和英文
 
-## 使用方式
+## 起步
+
+> 我在"常见问题"中总结了该项目之前被提及的一些问题，如果你在使用过程中遇到了问题，可以在"常见问题"中寻找答案，如果没能解决，欢迎提[issue](https://github.com/aircloud/hexo-theme-aircloud/issues)，我会保证回复。
+
+注意，如果你不按照"功能适配"部分的内容进行操作，可能会导致相关提及的功能无法正常使用。
+
+* [基本使用]()
+* [功能适配]()
+    * [搜索功能](https://github.com/aircloud/hexo-theme-aircloud#%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD)
+    * [评论功能](https://github.com/aircloud/hexo-theme-aircloud#%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD)
+    * [`标签`页面 & `关于`页面]()
+    * [favicon 的配置]()
+* [高级自定义]()
+    * [首行缩进]()
+* [常见问题]()
+    * [如何取消赞赏功能？]()
+* [一些注意事项]()    
+
+## 基本使用    
 
 **建议：参考 [DEMO](https://github.com/aircloud/hexo-aircloud-blog) 进行配置，尤其是 _config.yml 部分，否则可能会造成功能缺失**
 
@@ -25,9 +43,9 @@ Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心
 
 具体的 _config.yml 自定义配置，请参考[DEMO](https://github.com/aircloud/hexo-aircloud-blog)。
 
-### 部分重点功能适配
+## 功能适配
 
-#### 搜索功能
+### 搜索功能
 
 为了使用搜索功能，首先需要安装下列插件：
 
@@ -43,32 +61,36 @@ search:
   field: post
 ```
 
-#### `标签`页面 & `关于`页面
+### `标签`页面 & `关于`页面
 
 如果是新项目，默认是没有`标签`页面和`关于`页面的，需要在`source`文件夹下建立`tags`文件夹和`about`文件夹。
 
 其中`tags`文件夹中新建`index.md`并写入：
 
 ```
----
-layout: "tags"
-title: "Tags"
----
+    ---
+    layout: "tags"
+    title: "Tags"
+    ---
 ```
 
 `about`文件夹下`index.md`为一篇支持 markdown 格式的文件，需要在开头添加：
 
 
 ```
----
-layout: "about"
-title: "About"
-date: 2016-04-21 04:48:33
-comments: true
----
+    ---
+    layout: "about"
+    title: "About"
+    date: 2016-04-21 04:48:33
+    comments: true
+    ---
 ```
 
-#### 评论功能
+### 评论功能
+
+目前，本博客接入了两种评论功能：[gitment](https://imsun.net/posts/gitment-introduction/) 和 [disqus](https://disqus.com) , 由于 gitment 经常会出现限频或者 404 等错误，所以建议使用 disqus。
+
+#### gitment
 
 建议先在[gitment](https://imsun.net/posts/gitment-introduction/)进行了解，然后参考[DEMO](https://github.com/aircloud/hexo-aircloud-blog)进行配置，其中一些相关项目如下：
 
@@ -81,9 +103,50 @@ comment:
   repo: hexo-aircloud-blog
 ```
 
-#### favicon 的配置
+#### disqus
+
+disqus 是一个使用比较广泛的评论系统，我们需要先在[官方网站](https://disqus.com)注册一个账号，登录后，点击首页的 GET STARTED 按钮，之后选择 I want to install Disqus on my site 选项，填写相关内容，值得注意的是，`Website Name` 需要全网唯一，而且，一般情况，假设你的 `Website Name` 填写的是 example，那么下文 `script` 字段就可以写 `'https://example.disqus.com/embed.js'`。当然，你也可以在下一步 -> 选择 basic 免费套餐 -> 选择最后的 "I don't see my platform listed, installed manually with universal code" -> 找到代码中的 `s.src = 'https://xxxx.disqus.com/embed.js';
+` , 从而找到 script 地址。(无需插入 disqus 给出的脚本，只需按照这里的说明配置即可)
+
+之后，你需要在 `_config.yml` 中配置如下内容：
+
+```
+comment:
+   type: disqus
+   script: 'https://example.disqus.com/embed.js'
+```
+
+当然，你也可以配置`url` 和 `identifier`， 但是这个就属于高级内容了，对于我们一般的 hexo 博客网站来说必要性不大，如果你需要配置这些内容，可能你已经是一个高级玩家了，可以在 `themes/aircloud/layout/layout.ejs` 的相关代码的基础上进行改动。
+
+### favicon 的配置
 
 项目的 favicon 默认在你的博客根目录的 `/source/img` 下面，在 `/source/img` 下面添加 favicon.ico 即可，不要添加在主题文件夹内。
+
+## 高级自定义
+
+### 首行缩进
+
+目前可以配置是否在博客页面带有首行缩进两个汉字的效果，默认是有首行缩进的效果的，但是也可以通过下面的配置代码进行关闭：
+
+```
+post_style:
+    indent: 0
+```
+
+## 常见问题
+
+###  如何取消赞赏功能？
+
+目前网站的赞赏功能做的比较鸡肋，缺乏一定的丰富度，如果你想取消这个功能，只需取消注释或者删除掉赞赏部分的相关配置即可：
+
+```
+donate:
+  img: img/donate.jpg
+  content: 感谢鼓励
+```
+
+另外，如果你对赞赏部分有用户体验较好并且通用型比较好的设计，也可以提 issue，我会考虑实现。
+
 
 ## 一些注意事项
 
