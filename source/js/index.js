@@ -13,9 +13,9 @@ window.onresize = () => {
         aboutContent.classList.remove('hide-block')
         aboutContent.classList.remove('show-block');
     }
-    if(window.isPost){
-        reLayout()
-    }
+    // if(window.isPost){
+        // reLayout()
+    // }
 
     reHeightToc();
 };
