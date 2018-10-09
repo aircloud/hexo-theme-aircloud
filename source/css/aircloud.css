@@ -167,7 +167,7 @@ body {
   border: none;
   user-select: none;
 }
-.site-nav-toggle button .hhbtn-bar {
+.site-nav-toggle button .btn-bar {
   display: block;
   width: 22px;
   height: 2px;
@@ -1184,6 +1184,14 @@ pre .javascript .function {
   position: fixed;
   top: 10px;
   width: 240px;
+}
+.toc-fixed::-webkit-scrollbar {
+  width: 0;
+}
+.toc-fixed::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  -webkit-border-radius: 4px;
+  border-radius: 2px;
 }
 @media screen and (max-width: 1180px) {
   .toc-article {
