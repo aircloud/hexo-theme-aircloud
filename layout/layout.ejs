@@ -42,8 +42,8 @@
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <%- js('js/index.js') %>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<%if( (is_post() || is_current('about')) && config.comment){%>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<%if( (is_post() || is_current('about')) && config.comment && config.comment.type === 'gitment'){%>
 <%- js('js/gitment.js') %>
 <script>
     var gitment = new Gitment({
@@ -58,4 +58,24 @@
     gitment.render('comment-container')
 </script>
 <%}%>
+<%if( (is_post() || is_current('about')) && config.comment && config.comment.type === 'disqus'){%>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '<%- config.comment.url %>' || '<%- config.comment.identifier %>')
+        var disqus_config = function () {
+            this.page.url = '<%- config.comment.url %>';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = '<%- config.comment.identifier %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '<%- config.comment.script %>';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+<% } %>
 </html>

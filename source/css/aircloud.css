@@ -696,6 +696,9 @@ body {
 #comment-container {
   text-indent: 0;
 }
+.post-content li p {
+  display: inline;
+}
 .index-about {
   text-align: center;
   width: 100%;
@@ -721,6 +724,7 @@ body {
   margin: auto;
   display: flex;
   flex-direction: row;
+  background-color: white;
 }
 .index-container .index-left {
   width: 240px;
@@ -1180,6 +1184,14 @@ pre .javascript .function {
   position: fixed;
   top: 10px;
   width: 240px;
+}
+.toc-fixed::-webkit-scrollbar {
+  width: 0;
+}
+.toc-fixed::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  -webkit-border-radius: 4px;
+  border-radius: 2px;
 }
 @media screen and (max-width: 1180px) {
   .toc-article {

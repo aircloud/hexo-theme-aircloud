@@ -13,17 +13,18 @@ window.onresize = () => {
         aboutContent.classList.remove('hide-block')
         aboutContent.classList.remove('show-block');
     }
-    if(window.isPost){
-        reLayout()
-    }
-}
+    // if(window.isPost){
+        // reLayout()
+    // }
+
+    reHeightToc();
+};
 
 // Nav switch function on mobile
 /*****************************************************************************/
 const navToggle = document.getElementById('site-nav-toggle');
 navToggle.addEventListener('click', () => {
     let aboutContent = document.getElementById('nav-content')
-    console.log("aboutContent:",aboutContent.classList)
     if (!aboutContent.classList.contains('show-block')) {
         aboutContent.classList.add('show-block');
         aboutContent.classList.remove('hide-block')
@@ -235,10 +236,19 @@ var toc = document.getElementById('toc')
 
 var tocToTop = getDistanceOfLeft(toc).top;
 
+function reHeightToc(){
+    if(toc) { // resize toc height
+        toc.style.height = ( document.documentElement.clientHeight - 10 ) + 'px';
+        toc.style.overflowY = 'scroll';
+    }
+}
+
+reHeightToc();
+
 if(window.isPost){
     var result = []
 
-    let nameSet = new Set();
+    var nameSet = new Set();
 
     if(!toc || !toc.children || !toc.children[0]){
         // do nothing
@@ -250,16 +260,14 @@ if(window.isPost){
             function getArrayFromOl(ol) {
                 let result = []
 
-                let escape = function (item) {
-                    return item.replace(/<[^>]+>/g, "").replace(/^\s\s*/, '').replace(/\s\s*$/, '').replace(/[\. ]/g, '-')
-                }
+                // let escape = function (item) {
+                //     return item.replace(/<[^>]+>/g, "").replace(/^\s\s*/, '').replace(/\s\s*$/, '').replace(/[\. _]/g, '-')
+                // }
 
                 ol.forEach((item) => {
-                    console.log('nameSet:', nameSet)
                     if (item.children.length === 1) {
                         // TODO: need change
-                        let value = escape(item.children[0].innerHTML);
-                        // console.log("value:", value)
+                        let value = item.children[0].getAttribute('href').replace(/^#/,"")
                         result.push({
                             value: [value],
                             dom: item
@@ -268,9 +276,9 @@ if(window.isPost){
                     }
                     else {
                         let concatArray = getArrayFromOl(Array.from(item.children[1].children))
-                        nameSet.add(escape(item.children[0].innerHTML))
+                        nameSet.add(item.children[0].getAttribute('href').replace(/^#/,""))
                         result.push({
-                            value: [escape(item.children[0].innerHTML)].concat(concatArray.reduce((p, n) => {
+                            value: [item.children[0].getAttribute('href').replace(/^#/,"")].concat(concatArray.reduce((p, n) => {
                                 p = p.concat(n.value)
                                 return p;
                             }, [])),
@@ -287,11 +295,15 @@ if(window.isPost){
 
         var nameArray = Array.from(nameSet)
 
-        console.log("nameArray:", nameArray)
-        console.log("result:", result)
-
         function reLayout() {
-            if (tocToTop <= document.documentElement.scrollTop + 10) {
+            let scrollToTop = document.documentElement.scrollTop || window.pageYOffset // Safari is special
+            if(tocToTop === 0) {
+                // Fix bug that when resize window the toc layout may be wrong
+                toc = document.getElementById('toc')
+                toc.classList.remove('toc-fixed')
+                tocToTop = getDistanceOfLeft(toc).top;
+            }
+            if (tocToTop <= scrollToTop + 10) {
                 if (!toc.classList.contains('toc-fixed'))
                     toc.classList.add('toc-fixed')
             } else {
@@ -305,7 +317,7 @@ if(window.isPost){
             for (let item of nameArray) {
                 let dom = document.getElementById(item) || document.getElementById(item.replace(/\s/g, ''))
                 if (!dom) continue
-                let toTop = getDistanceOfLeft(dom).top - document.documentElement.scrollTop;
+                let toTop = getDistanceOfLeft(dom).top - scrollToTop;
 
                 if (Math.abs(toTop) < minTop) {
                     minTop = Math.abs(toTop)
@@ -349,8 +361,6 @@ if(donateButton) {
             donateImgContainer.classList.add('hide')
         }
     })
-
-    console.log("donateImg.dataset",donateImg.dataset)
 
     donateImg.src = donateImg.dataset.src
 }

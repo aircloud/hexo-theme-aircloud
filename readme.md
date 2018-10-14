@@ -17,7 +17,26 @@ Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心
 * 访问量统计（总体UV、PV，单页PV）
 * 语言切换能力，目前支持中文和英文
 
-## 使用方式
+## 起步
+
+> 我在"常见问题"中总结了该项目之前被提及的一些问题，如果你在使用过程中遇到了问题，可以在"常见问题"中寻找答案，如果没能解决，欢迎提[issue](https://github.com/aircloud/hexo-theme-aircloud/issues)，我会保证回复。
+
+注意，如果你不按照"功能适配"部分的内容进行操作，可能会导致相关提及的功能无法正常使用。
+
+* [基本使用](https://github.com/aircloud/hexo-theme-aircloud#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8)
+* [功能适配](https://github.com/aircloud/hexo-theme-aircloud#%E5%8A%9F%E8%83%BD%E9%80%82%E9%85%8D)
+    * [搜索功能](https://github.com/aircloud/hexo-theme-aircloud#%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD)
+    * [`标签`页面 & `关于`页面](https://github.com/aircloud/hexo-theme-aircloud#%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2--%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2)
+    * [评论功能](https://github.com/aircloud/hexo-theme-aircloud#%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD)
+    * [favicon 的配置](https://github.com/aircloud/hexo-theme-aircloud#%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2--%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2)
+    * [底部自定义](https://github.com/aircloud/hexo-theme-aircloud#%E5%BA%95%E9%83%A8%E8%87%AA%E5%AE%9A%E4%B9%89)
+* [高级自定义](https://github.com/aircloud/hexo-theme-aircloud#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B)
+    * [首行缩进](https://github.com/aircloud/hexo-theme-aircloud#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B)
+* [常见问题](https://github.com/aircloud/hexo-theme-aircloud#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+    * [如何取消赞赏功能？](https://github.com/aircloud/hexo-theme-aircloud#%E5%A6%82%E4%BD%95%E5%8F%96%E6%B6%88%E8%B5%9E%E8%B5%8F%E5%8A%9F%E8%83%BD)
+* [一些注意事项](https://github.com/aircloud/hexo-theme-aircloud#%E4%B8%80%E4%BA%9B%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)    
+
+## 基本使用    
 
 **建议：参考 [DEMO](https://github.com/aircloud/hexo-aircloud-blog) 进行配置，尤其是 _config.yml 部分，否则可能会造成功能缺失**
 
@@ -25,9 +44,9 @@ Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心
 
 具体的 _config.yml 自定义配置，请参考[DEMO](https://github.com/aircloud/hexo-aircloud-blog)。
 
-### 部分重点功能适配
+## 功能适配
 
-#### 搜索功能
+### 搜索功能
 
 为了使用搜索功能，首先需要安装下列插件：
 
@@ -43,34 +62,140 @@ search:
   field: post
 ```
 
-#### `标签`页面 & `关于`页面
+### `标签`页面 & `关于`页面
 
 如果是新项目，默认是没有`标签`页面和`关于`页面的，需要在`source`文件夹下建立`tags`文件夹和`about`文件夹。
 
 其中`tags`文件夹中新建`index.md`并写入：
 
 ```
----
-layout: "tags"
-title: "Tags"
----
+    ---
+    layout: "tags"
+    title: "Tags"
+    ---
 ```
 
 `about`文件夹下`index.md`为一篇支持 markdown 格式的文件，需要在开头添加：
 
 
 ```
----
-layout: "about"
-title: "About"
-date: 2016-04-21 04:48:33
-comments: true
----
+    ---
+    layout: "about"
+    title: "About"
+    date: 2016-04-21 04:48:33
+    comments: true
+    ---
 ```
 
-#### 评论功能
+### 评论功能
 
-建议先在[gitment](https://imsun.net/posts/gitment-introduction/)进行了解，然后参考[DEMO](https://github.com/aircloud/hexo-aircloud-blog)进行配置。
+目前，本博客接入了两种评论功能：[gitment](https://imsun.net/posts/gitment-introduction/) 和 [disqus](https://disqus.com) , 由于 gitment 经常会出现限频或者 404 等错误，所以建议使用 disqus。
+
+#### gitment
+
+建议先在[gitment](https://imsun.net/posts/gitment-introduction/)进行了解，然后参考[DEMO](https://github.com/aircloud/hexo-aircloud-blog)进行配置，其中一些相关项目如下：
+
+```
+comment:
+  type: gitment
+  id: your-id-created-by-https://github.com/settings/applications/new
+  secret: your-secret-created-by-https://github.com/settings/applications/new
+  owner: aircloud
+  repo: hexo-aircloud-blog
+```
+
+#### disqus
+
+disqus 是一个使用比较广泛的评论系统，我们需要先在[官方网站](https://disqus.com)注册一个账号。
+
+登录后，点击首页的 GET STARTED 按钮，之后选择 I want to install Disqus on my site 选项，填写相关内容，值得注意的是，`Website Name` 需要全网唯一，而且，一般情况，假设你的 `Website Name` 填写的是 example，那么下文 `script` 字段就可以写 `'https://example.disqus.com/embed.js'`。
+
+当然，你也可以在下一步 -> 选择 basic 免费套餐 -> 选择最后的 "I don't see my platform listed, installed manually with universal code" -> 找到代码中的 `s.src = 'https://xxxx.disqus.com/embed.js';
+` , 从而找到 script 地址。(无需插入 disqus 给出的脚本，只需按照这里的说明配置即可)
+
+之后，你需要在 `_config.yml` 中配置如下内容：
+
+```
+comment:
+   type: disqus
+   script: 'https://example.disqus.com/embed.js'
+```
+
+当然，你也可以配置`url` 和 `identifier`， 但是这个就属于高级内容了，对于我们一般的 hexo 博客网站来说必要性不大，如果你需要配置这些内容，可能你已经是一个高级玩家了，可以在 `themes/aircloud/layout/layout.ejs` 的相关代码的基础上进行改动。
+
+>注意: 目前，直接嵌入 disqus 的代码可能会加载失败，你也可以考虑将相关代码放在自己的博客下引入：在 public 文件夹下新建文件放入代码，跟随发布即可（放入 source 文件夹下可能会由于 hexo 的处理变得有错误），并同时更改 `_config.yml` 中的配置。
+
+### favicon 的配置
+
+项目的 favicon 默认在你的博客根目录的 `/source/img` 下面，在 `/source/img` 下面添加 favicon.ico 即可，不要添加在主题文件夹内。
+
+### 底部自定义
+
+大家如果访问提供的预览链接，会发现我们的博客底部是提供一些内容的：一些社交平台的个人主页链接、友情链接、PV、UV 与 本模版链接。
+
+一般情况下，大家无需改动底部的代码，直接在 `_config.yml` 中配置即可。
+
+配置社交平台主页的样例代码：
+
+```
+# SNS settings
+# 一些社交平台地址，支持以下几种：
+weibo_username:     3286578617
+zhihu_username:     ai-er-lan-xue-da
+github_username:    AirCloud
+twitter_username:   iconie_alloy
+facebook_username:  xiaotao.nie.5
+linkedin_username:  小涛-聂-80964aba
+```
+
+如果不想包括某些社交平台，直接注释或删除相关代码即可（目前暂不支持在不改动模版代码的前提下新增社交平台）。
+
+配置友情链接的样例代码：
+
+```
+# Friends
+# 友情链接
+friends: [
+    {
+        title: "10000H",
+        href: "https://www.10000h.top"
+    },{
+        title: "Xiaotao's Page",
+        href: "https://niexiaotao.com"
+    },{
+        title: "It helps SEO",
+        href: "#"
+    }
+]
+```
+
+最底部的 PV、UV 和模版地址，无需配置。
+
+## 高级自定义
+
+### 首行缩进
+
+目前可以配置是否在博客页面带有首行缩进两个汉字的效果，默认是有首行缩进的效果的，但是也可以通过下面的配置代码进行关闭：
+
+```
+post_style:
+    indent: 0
+```
+
+## 常见问题
+
+###  如何取消赞赏功能？
+
+目前网站的赞赏功能做的比较鸡肋，缺乏一定的丰富度，如果你想取消这个功能，只需取消注释或者删除掉赞赏部分的相关配置即可：
+
+```
+donate:
+  img: img/donate.jpg
+  content: 感谢鼓励
+```
+
+另外，如果你对赞赏部分有用户体验较好并且通用型比较好的设计，也可以提 issue，我会考虑实现。
+
 
 ## 一些注意事项
 
