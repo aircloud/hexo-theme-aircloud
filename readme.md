@@ -1,3 +1,5 @@
+###### 本博客提供给腾讯课堂官方课程[一线大厂 React 实践宝典](https://ke.qq.com/next_detail/index.html?id=4)做项目参考，作者即课程讲师之一。
+
 ## Hexo-Theme-AirCloud: 一个简洁轻量的 hexo 博客主题
 
 > [English Document](./readme-en.md) | [预览地址](http://niexiaotao.cn/)
