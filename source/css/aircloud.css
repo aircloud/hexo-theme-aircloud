@@ -696,6 +696,9 @@ body {
 #comment-container {
   text-indent: 0;
 }
+#lv-container {
+  text-indent: 0;
+}
 .post-content li p {
   display: inline;
 }

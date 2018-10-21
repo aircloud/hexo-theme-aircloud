@@ -89,7 +89,10 @@ search:
 
 ### 评论功能
 
-目前，本博客接入了两种评论功能：[gitment](https://imsun.net/posts/gitment-introduction/) 和 [disqus](https://disqus.com) , 由于 gitment 经常会出现限频或者 404 等错误，所以建议使用 disqus。
+目前，本博客支持以下评论功能：
+- [gitment](https://imsun.net/posts/gitment-introduction/)（gitment 经常会出现限频或者 404 等错误，其作者已关闭github认证转发服务）
+- [disqus](https://disqus.com) 
+- [LiveRe](https://www.livere.com)
 
 #### gitment
 
@@ -124,6 +127,25 @@ comment:
 当然，你也可以配置`url` 和 `identifier`， 但是这个就属于高级内容了，对于我们一般的 hexo 博客网站来说必要性不大，如果你需要配置这些内容，可能你已经是一个高级玩家了，可以在 `themes/aircloud/layout/layout.ejs` 的相关代码的基础上进行改动。
 
 >注意: 目前，直接嵌入 disqus 的代码可能会加载失败，你也可以考虑将相关代码放在自己的博客下引入：在 public 文件夹下新建文件放入代码，跟随发布即可（放入 source 文件夹下可能会由于 hexo 的处理变得有错误），并同时更改 `_config.yml` 中的配置。
+
+#### LiveRe
+
+LiveRe 是一款来自韩国的支持中文且没有被墙LiveRe评论插件，重点是使用无需翻墙。
+
+该插件分为city和premium两个版本，其中city版是适合所有人使用的免费版本,有更高需求的可以考虑premium版本。
+
+注册之后，选择 安装 -> 选 city版本，按提示操作进入到管理页面，系统会给出一段嵌入代码，找到其中的data-id和data-uid。
+
+之后，你需要在`_config.yml`中配置如下内容
+
+```
+comment:
+   type: livere
+   livere_id: 'city'
+   livere_uid: 
+```
+
+`livere_id` 和 `livere_uid`就是注册后获得的 data-id和data-uid。
 
 ### favicon 的配置
 
