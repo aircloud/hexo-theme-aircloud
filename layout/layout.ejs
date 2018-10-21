@@ -82,9 +82,9 @@
 <%if( (is_post() || is_current('about')) && config.comment && config.comment.type === 'livere'){%>
     <script type="text/javascript">
        (function() {
-           var j, d = document.getElementById('lv-container');
-
            if (typeof LivereTower === 'function') { return; }
+
+           var j, d = document.getElementById('lv-container');
 
            d.setAttribute('data-id','<%- config.comment.livere_id %>');
            d.setAttribute('data-uid' , '<%- config.comment.livere_uid %>');
