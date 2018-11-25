@@ -56,7 +56,7 @@
   color: #4990E2;
 }
 .post-content p {
-  color: #4a4a4a;
+  color: #404040;
   font-size: 14px;
   line-height: 30px;
   text-indent: 2em;
@@ -72,9 +72,11 @@
 .post-content ul li,
 .post-content ol li {
   list-style: none;
-  font-size: 15px;
+  color: #404040;
+  font-size: 14px;
   line-height: 30px;
-  color: #4a4a4a;
+  text-indent: 2em;
+  letter-spacing: 1px;
   margin-bottom: 5px;
   margin-top: 5px;
 }
@@ -91,32 +93,32 @@
   line-height: 175%;
 }
 .post-content h1 {
-  color: #3d3d3d;
+  color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .post-content h2 {
-  color: #3d3d3d;
+  color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .post-content h3 {
-  color: #3d3d3d;
+  color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .post-content h4 {
-  color: #3d3d3d;
+  color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .post-content h5 {
-  color: #3d3d3d;
+  color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .post-content h6 {
-  color: #3d3d3d;
+  color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
 }
