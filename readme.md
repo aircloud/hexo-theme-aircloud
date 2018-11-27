@@ -68,6 +68,8 @@ search:
 
 如果是新项目，默认是没有`标签`页面和`关于`页面的，需要在`source`文件夹下建立`tags`文件夹和`about`文件夹。
 
+>注：建议不要直接新建文件，而是采用 hexo 的 `hexo new page tags` 和 `hexo new page about` 的方式新建文件，这样可以被 hexo 索引到。
+
 其中`tags`文件夹中新建`index.md`并写入：
 
 ```
