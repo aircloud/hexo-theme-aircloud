@@ -9,6 +9,7 @@ html {
 }
 body {
   margin-left: calc(100vw - 100%) !important;
+  -webkit-text-size-adjust: none;
 }
 .red {
   color: red;
