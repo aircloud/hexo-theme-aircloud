@@ -87,9 +87,9 @@
 .post-content pre {
   text-indent: 0;
   padding: 10px;
+  margin-left: 2em;
 }
 .post-content pre code {
-  color: white;
   line-height: 175%;
 }
 .post-content h1 {

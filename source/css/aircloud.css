@@ -113,6 +113,7 @@ body {
 .nav .avatar-name .avatar img {
   width: 100px;
   height: 100px;
+  border-radius: 50%;
 }
 .nav .avatar-name .name {
   margin-top: 10px;
@@ -661,9 +662,9 @@ body {
 .post-content pre {
   text-indent: 0;
   padding: 10px;
+  margin-left: 2em;
 }
 .post-content pre code {
-  color: white;
   line-height: 175%;
 }
 .post-content h1 {
