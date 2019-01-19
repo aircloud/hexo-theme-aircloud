@@ -943,6 +943,7 @@ pre code {
 }
 .highlight {
   border-radius: 1px;
+  margin-left: 2em;
 }
 .highlight pre {
   border: none;
