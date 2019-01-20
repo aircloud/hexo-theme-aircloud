@@ -340,9 +340,6 @@ if(window.isPost){
 
         reLayout()
 
-        window.addEventListener('scroll', (e) => {
-            reLayout()
-        })
     }
 }
 
