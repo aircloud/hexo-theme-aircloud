@@ -337,7 +337,9 @@ if(window.isPost){
                 }
             }
         }
-
+        window.addEventListener('scroll', function(e) {
+            window.scrollY < 450 ? document.querySelector('#toc').classList.remove('toc-fixed') : document.querySelector('#toc').classList.add('toc-fixed')
+        })
         reLayout()
 
     }
