@@ -338,7 +338,8 @@ if(window.isPost){
             }
         }
         window.addEventListener('scroll', function(e) {
-            window.scrollY < 450 ? document.querySelector('#toc').classList.remove('toc-fixed') : document.querySelector('#toc').classList.add('toc-fixed')
+            let tocDom = document.querySelector('#toc')
+            window.scrollY < 550 ? tocDom.classList.remove('toc-fixed') : tocDom.classList.add('toc-fixed')
         })
         reLayout()
 
