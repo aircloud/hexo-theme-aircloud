@@ -612,6 +612,14 @@ body {
   color: #333333;
   font-weight: 300;
 }
+.post-content > table,
+.post-content > table tr th,
+.post-content > table tr td {
+  border: 1px solid #e7e8e9;
+}
+.post-content table {
+  border-collapse: collapse;
+}
 .post-content blockquote {
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
