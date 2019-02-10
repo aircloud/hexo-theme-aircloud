@@ -32,7 +32,9 @@ site.posts.sort('date').reverse().forEach(function(post){
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
             <a href="<%- config.root %><%- post.path %>">
                         <span>
-                            <%- post.title || "Untitled" %>
+                            <%- (post.title || "Untitled").replace(/[<>&"]/g,function(c){
+                                return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
+                            }) %>
                         </span>
             </a>
             <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
