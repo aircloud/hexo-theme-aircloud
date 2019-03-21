@@ -98,6 +98,19 @@ search:
 - [disqus](https://disqus.com) 
 - [LiveRe](https://www.livere.com)
 
+#### gitalk
+
+建议先在[gitment](https://imsun.net/posts/gitment-introduction/)进行了解，然后参考[DEMO](https://github.com/aircloud/hexo-aircloud-blog)进行配置，其中一些相关项目如下：
+
+```
+comment:
+  type: gitalk
+  id: your-id-created-by-https://github.com/settings/applications/new
+  secret: your-secret-created-by-https://github.com/settings/applications/new
+  owner: aircloud
+  repo: hexo-aircloud-blog
+```
+
 #### gitment
 
 建议先在[gitment](https://imsun.net/posts/gitment-introduction/)进行了解，然后参考[DEMO](https://github.com/aircloud/hexo-aircloud-blog)进行配置，其中一些相关项目如下：
