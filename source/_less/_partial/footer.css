@@ -12,6 +12,9 @@
   margin-top: 5px;
   margin-bottom: 0;
   font-weight: 300;
+  margin-right: 20px;
+  word-break: break-all;
+  margin-left: 20px;
 }
 .footer p a {
   font-weight: 300;
@@ -61,11 +64,14 @@
     padding-right: 20px;
   }
   .footer p {
+    word-break: break-all;
     font-family: "Montserrat", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, sans-serif;
     font-size: 11px;
     margin-top: 5px;
     margin-bottom: 0;
     font-weight: 300;
+    margin-right: 20px;
+    margin-left: 20px;
   }
   .footer p span a {
     font-size: 11px;
@@ -79,3 +85,4 @@
     color: #333333;
   }
 }
+/*# sourceMappingURL=footer.css.map */
