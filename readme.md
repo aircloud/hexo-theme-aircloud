@@ -208,6 +208,13 @@ post_style:
     indent: 0
 ```
 
+### 头像圆角
+
+```
+avatar_style:
+  radius: true
+```
+
 ## 常见问题
 
 ###  如何取消赞赏功能？
