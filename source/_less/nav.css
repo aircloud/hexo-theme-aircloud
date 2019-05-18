@@ -23,6 +23,9 @@
   width: 100px;
   height: 100px;
 }
+.nav .avatar-name .radius img {
+  border-radius: 50%;
+}
 .nav .avatar-name .name {
   margin-top: 10px;
   margin-bottom: 20px;
