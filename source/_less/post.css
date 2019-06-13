@@ -129,6 +129,9 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.post-content figcaption {
+  text-align: center;
+}
 #comment-container {
   text-indent: 0;
 }
