@@ -238,7 +238,7 @@ var tocToTop = getDistanceOfLeft(toc).top;
 
 function reHeightToc(){
     if(toc) { // resize toc height
-        toc.style.height = ( document.documentElement.clientHeight - 10 ) + 'px';
+        toc.style.maxHeight = ( document.documentElement.clientHeight - 10 ) + 'px';
         toc.style.overflowY = 'scroll';
     }
 }
@@ -341,8 +341,9 @@ if(window.isPost){
         reLayout()
 
         window.addEventListener('scroll', function(e) {
-            let tocDom = document.querySelector('#toc')
-            window.scrollY < 550 ? tocDom.classList.remove('toc-fixed') : tocDom.classList.add('toc-fixed')
+            reLayout()
+            // let tocDom = document.querySelector('#toc')
+            // window.scrollY < 550 ? tocDom.classList.remove('toc-fixed') : tocDom.classList.add('toc-fixed')
         })
     }
 }
