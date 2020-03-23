@@ -1,0 +1,16 @@
+nav:
+  home: 홈
+  tags: 태그
+  archives: 아카이브
+  about: about
+  search: 검색
+
+post:
+  postTime: 등록시간
+  tags: 태그
+  visit: 방문
+  donate: 기부
+
+search:
+  search: 검색
+
