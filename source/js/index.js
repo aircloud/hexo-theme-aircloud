@@ -131,7 +131,7 @@ function searchFromKeyWord(keyword = ""){
                     let reg = caseSensitive ?  new RegExp('('+keyword+')','g') :  new RegExp('('+keyword+')','ig')
                     resultItem.content.push("..." + content.slice(lastend + begin, lastend + end).replace(reg, "<span class='red'>$1</span>") + "...")
                     lowerContent = lowerContent.slice(end, lowerContent.length)
-                    lastend = end
+                    lastend += end
                 }
                 // resultItem.title = title.replace(keyword, "<span class='red'>" + keyword + '</span>');
                 result.push(resultItem)
