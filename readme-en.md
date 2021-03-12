@@ -2,13 +2,13 @@
 
 note: The English version of the documentation is waiting for synchronization from the chinese version.
 
-> [中文文档](./readme.md) | [LIVE PRIVIEW](http://niexiaotao.cn/)
+> [中文文档](./readme.md) | [LIVE PREVIEW](http://niexiaotao.cn/)
 
 ## Introduction
 
 Hexo-Theme-AirCloud is a light and clean hexo template designed to focus on the blog itself, so:
 
-* By default, there is no large color blocks, picture layouts, etc. It does't require a head picture of each blog. Because on the one hand, it is not the focus of our knowledge record, on the other hand, the programmers may not have enough picture materials which may easily cause copyright disputes.
+* By default, there is no large color blocks, picture layouts, etc. It doesn't require a head picture of each blog. Because on the one hand, it is not the focus of our knowledge record, on the other hand, the programmers may not have enough picture materials which may easily cause copyright disputes.
 * It is recommended to communicate through non-redundant content. For example, there are no blog abstracts by default because many developers don't write blog abstracts when they write blogs. If they are intercepted from the previous part of the blog, they often can't express the complete idea.
 
 In addition, the main functions of this theme are:
@@ -29,7 +29,7 @@ Specific _config.yml custom configuration, **it is recommended to refer to [DEMO
 
 Due to some history issues of the hexo, in order to avoid trouble when in the use process, it is recommended that users follow some rules in the use process:
 
-* Do not hava a skip-level directory in one blog. For example, a '###' third level directory followed by a '#####' is not recommended.
+* Do not have a skip-level directory in one blog. For example, a '###' third level directory followed by a '#####' is not recommended.
 
 
 > This theme is Continuous updating
