@@ -680,31 +680,43 @@ body {
   color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 120%;
+  word-break: break-all;
 }
 .post-content h2 {
   color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 120%;
+  word-break: break-all;
 }
 .post-content h3 {
   color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 120%;
+  word-break: break-all;
 }
 .post-content h4 {
   color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 120%;
+  word-break: break-all;
 }
 .post-content h5 {
   color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 120%;
+  word-break: break-all;
 }
 .post-content h6 {
   color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 120%;
+  word-break: break-all;
 }
 .post-content figcaption {
   text-align: center;

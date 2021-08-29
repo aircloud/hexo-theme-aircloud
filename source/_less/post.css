@@ -102,31 +102,43 @@
 .post-content h1 {
   color: #333333;
   margin-top: 20px;
+  line-height: 120%;
+  word-break: break-all;
   margin-bottom: 20px;
 }
 .post-content h2 {
   color: #333333;
   margin-top: 20px;
+  line-height: 120%;
+  word-break: break-all;
   margin-bottom: 20px;
 }
 .post-content h3 {
   color: #333333;
   margin-top: 20px;
+  line-height: 120%;
+  word-break: break-all;
   margin-bottom: 20px;
 }
 .post-content h4 {
   color: #333333;
   margin-top: 20px;
+  line-height: 120%;
+  word-break: break-all;
   margin-bottom: 20px;
 }
 .post-content h5 {
   color: #333333;
   margin-top: 20px;
+  line-height: 120%;
+  word-break: break-all;
   margin-bottom: 20px;
 }
 .post-content h6 {
   color: #333333;
   margin-top: 20px;
+  line-height: 120%;
+  word-break: break-all;
   margin-bottom: 20px;
 }
 .post-content figcaption {
