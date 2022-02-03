@@ -945,6 +945,7 @@ pre,
   line-height: 1.6;
 }
 pre,
+pre span,
 code {
   font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
 }
