@@ -8,3 +8,5 @@ public/
 .deploy*/
 unuse/
 readme-private.md
+
+.vscode/

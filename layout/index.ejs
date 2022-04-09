@@ -15,9 +15,7 @@ layout: layout
                 </h3>
             </a>
             <p>
-                <% if (post.tags.length){
-                    console.log(post.tags)
-                %>
+                <% if (post.tags.length){ %>
                 <span>/</span>
                 <% post.tags.forEach(function(tag){ %>
                 <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>

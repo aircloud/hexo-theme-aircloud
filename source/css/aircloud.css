@@ -89,6 +89,10 @@ body {
 .no-indent ol {
   text-indent: 0 !important;
 }
+.no-indent ul,
+.no-indent ol {
+  padding-left: 0 !important;
+}
 .nav {
   position: relative;
   padding-top: 50px;
@@ -608,11 +612,22 @@ body {
   margin-right: 5px;
   margin-left: 5px;
 }
+.article-content {
+  color: #2f3339;
+  font-size: 16px;
+  line-height: 170%;
+  letter-spacing: 1px;
+  word-break: break-all;
+}
+.article-content:hover {
+  background-color: rgba(51, 112, 255, 0.1);
+}
 .post-content {
   line-height: 20px;
   font-size: 15px;
   text-indent: 2em;
-  color: #333333;
+  letter-spacing: 1px;
+  color: #2f3339;
   font-weight: 300;
 }
 .post-content > table,
@@ -641,11 +656,15 @@ body {
   color: #4990E2;
 }
 .post-content p {
-  color: #404040;
-  font-size: 14px;
-  line-height: 30px;
   text-indent: 2em;
+  color: #2f3339;
+  font-size: 16px;
+  line-height: 170%;
   letter-spacing: 1px;
+  word-break: break-all;
+}
+.post-content p:hover {
+  background-color: rgba(51, 112, 255, 0.1);
 }
 .post-content p img {
   width: 80%;
@@ -656,17 +675,23 @@ body {
 }
 .post-content ul li,
 .post-content ol li {
-  list-style: none;
-  color: #404040;
-  font-size: 14px;
-  line-height: 30px;
-  text-indent: 2em;
-  letter-spacing: 1px;
+  list-style-position: inside;
   margin-bottom: 5px;
   margin-top: 5px;
+  color: #2f3339;
+  font-size: 16px;
+  line-height: 170%;
+  letter-spacing: 1px;
+  word-break: break-all;
 }
-.post-content ul li:before,
-.post-content ol li:before {
+.post-content ul li:hover,
+.post-content ol li:hover {
+  background-color: rgba(51, 112, 255, 0.1);
+}
+.post-content ul li {
+  list-style: none;
+}
+.post-content ul li:before {
   content: '• ';
 }
 .post-content pre {
@@ -677,46 +702,52 @@ body {
   line-height: 175%;
 }
 .post-content h1 {
-  color: #333333;
+  color: #2f3339;
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 120%;
   word-break: break-all;
+  font-size: 22px;
 }
 .post-content h2 {
-  color: #333333;
+  color: #2f3339;
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 120%;
   word-break: break-all;
+  font-size: 21px;
 }
 .post-content h3 {
-  color: #333333;
+  color: #2f3339;
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 120%;
   word-break: break-all;
+  font-size: 20px;
 }
 .post-content h4 {
-  color: #333333;
+  color: #2f3339;
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 120%;
   word-break: break-all;
+  font-size: 19px;
 }
 .post-content h5 {
-  color: #333333;
+  color: #2f3339;
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 120%;
   word-break: break-all;
+  font-size: 18px;
 }
 .post-content h6 {
-  color: #333333;
+  color: #2f3339;
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 120%;
   word-break: break-all;
+  font-size: 17px;
 }
 .post-content figcaption {
   text-align: center;
@@ -1190,6 +1221,7 @@ pre .javascript .function {
 }
 .toc-article ol {
   padding-left: 10px;
+  padding-right: 10px;
   cursor: pointer;
   font-size: 0;
 }
@@ -1247,4 +1279,3 @@ pre .javascript .function {
 .gitment-comment p {
   text-indent: 0;
 }
-/*# sourceMappingURL=aircloud.css.map */

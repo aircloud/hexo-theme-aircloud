@@ -28,6 +28,12 @@
                     <span><%= __('nav.archives') %></span>
                 </a>
             </li>
+            <li <% if(is_current('collect')){ %> <%- "class=active" %> <% } %>>
+                <a href="<%= config.root %><%- 'collect/' %>">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span><%= __('nav.collect') %></span>
+                </a>
+            </li>
             <li <% if(is_current('about')){ %> <%- "class=active" %> <% } %>>
                 <a href="<%= config.root %><%- 'about/' %>">
                     <i class="iconfont icon-guanyu2"></i>
