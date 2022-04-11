@@ -79,6 +79,10 @@
     </script>
 <% } %>
 
+<%if( (is_post() || is_current('about')) && config.comment && config.comment.type === 'giscus'){%>
+    <%- config.comment.script %>
+<% } %>
+
 <%if( (is_post() || is_current('about')) && config.comment && config.comment.type === 'livere'){%>
     <script type="text/javascript">
        (function() {
