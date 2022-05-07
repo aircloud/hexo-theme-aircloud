@@ -43,6 +43,7 @@ const searchField = document.getElementById('search-field')
 const searchInput = document.getElementById('search-input')
 const searchResultContainer = document.getElementById('search-result-container')
 const escSearch = document.getElementById('esc-search')
+const bgSearch = document.getElementById('search-bg')
 const beginSearch = document.getElementById('begin-search')
 
 searchField.addEventListener('mousewheel',(e) => {
@@ -59,6 +60,10 @@ searchButton.addEventListener('click', () => {
 });
 
 escSearch.addEventListener('click',() => {
+    hideSearchField()
+})
+
+bgSearch.addEventListener('click',() => {
     hideSearchField()
 })
 

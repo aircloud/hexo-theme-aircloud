@@ -200,7 +200,17 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.search-field .search-bg {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
 .search-field .search-container {
+  position: relative;
+  z-index: 5;
   width: 40vw;
   min-width: 500px;
   height: 70vh;
@@ -221,6 +231,7 @@ body {
 }
 .search-field .search-container .search-input span:nth-child(1) {
   width: 40px;
+  cursor: pointer;
 }
 .search-field .search-container .search-input #begin-search {
   cursor: pointer;

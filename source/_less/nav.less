@@ -112,7 +112,17 @@
   background-color: rgba(0,0,0,0.3);
   align-items: center;
   flex-direction: column;
+  .search-bg {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
   .search-container{
+    position: relative;
+    z-index: 5;
     width: 40vw;
     min-width: 500px;
     height: 70vh;
@@ -132,6 +142,7 @@
       }
       span:nth-child(1) {
         width: 40px;
+        cursor: pointer;
       }
       #begin-search{
         cursor: pointer;
