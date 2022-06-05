@@ -1,12 +1,21 @@
 <div id='tag_cloud' class="tags">
-    <% site.tags.map(function(tag){  %>
-    <a href="#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>"><%= tag.name %></a>
+    <% site.tags.map(a => a.name).sort((a, b) => {
+        return a.localeCompare(b, 'zh-Hans-CN', {sensitivity: 'accent'})
+    }).map(function(tag){  %>
+    <a href="#<%= tag %>" class="tag-triangle" title="<%= tag %>"><i class="tag-i"><%= tag %></i></a>
     <% }) %>
 </div>
 
 <!-- 标签列表 -->
 
-<% site.tags.map(function(tag){  %>
+<% site.tags.map(a => {
+   return {
+       name: a.name,
+       posts: a.posts
+   }
+}).sort((a, b) => {
+    return a.name.localeCompare(b.name, 'zh-Hans-CN', {sensitivity: 'accent'})
+}).map(function(tag){  %>
 <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="<%= tag.name %>">
                     <span class="tag-text"><%= tag.name %></span>
