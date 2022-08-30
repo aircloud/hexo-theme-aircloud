@@ -10,36 +10,16 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li <% if(is_home()){ %> <%- "class=active" %> <% } %>>
-                <a href="<%= url_for(config.home_dir || '/') %>">
-                    <i class="iconfont icon-shouye1"></i>
-                    <span><%= __('nav.home') %></span>
+
+            <% (config.navs || theme.navs).forEach((nav) => { %>
+            <li <% if(nav.url ? is_current(nav.url) : is_home()){ %> <%- "class=active" %> <% } %>>
+                <a href="<%= url_for(nav.url) %>">
+                    <i class="<%= nav.icon %>"></i>
+                    <span><%= nav.title %></span>
                 </a>
             </li>
-            <li <% if(is_current('tags')){ %> <%- "class=active" %> <% } %>>
-                <a href="<%= url_for(config.tag_dir) %>">
-                    <i class="iconfont icon-biaoqian1"></i>
-                    <span><%= __('nav.tags') %></span>
-                </a>
-            </li>
-            <li <% if(is_current('archive')){ %> <%- "class=active" %> <% } %>>
-                <a href="<%= url_for(config.archive_dir) %>">
-                    <i class="iconfont icon-guidang2"></i>
-                    <span><%= __('nav.archives') %></span>
-                </a>
-            </li>
-            <li <% if(is_current('collect')){ %> <%- "class=active" %> <% } %>>
-                <a href="<%= config.root %><%- 'collect/' %>">
-                    <i class="iconfont icon-shoucang1"></i>
-                    <span><%= __('nav.collect') %></span>
-                </a>
-            </li>
-            <li <% if(is_current('about')){ %> <%- "class=active" %> <% } %>>
-                <a href="<%= config.root %><%- 'about/' %>">
-                    <i class="iconfont icon-guanyu2"></i>
-                    <span><%= __('nav.about') %></span>
-                </a>
-            </li>
+            <% }); %>
+
             <%if(config.search && config.search.path){%>
             <li>
                 <a id="search">

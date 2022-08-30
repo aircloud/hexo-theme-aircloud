@@ -1,1 +1,12 @@
 __: aircloud
+
+icon_urls:
+  - //at.alicdn.com/t/font_620856_28hi1hpxx24.css
+
+navs: [
+    { title: '主页', icon: 'iconfont icon-shouye1' },
+    { title: '标签', url: '/tags', icon: 'iconfont icon-biaoqian1' },
+    { title: '存档', url: '/archives', icon: 'iconfont icon-guidang2' },
+    { title: '收藏', url: '/collect', icon: 'iconfont icon-shoucang1' },
+    { title: '关于', url: '/about', icon: 'iconfont icon-guanyu2' },
+]
