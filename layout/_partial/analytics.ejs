@@ -1,0 +1,56 @@
+<% if (config.analytics && config.analytics.google){ %>
+  <% if (config.analytics.google.site_verification){ %>
+    <meta name="google-site-verification" content="<%= config.analytics.google.site_verification %>"/>
+  <% } %>
+  <% if (config.analytics.google.gtag_id){ %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= config.analytics.google.gtag_id %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', '<%= config.analytics.google.gtag_id %>')
+    </script>
+  <% } %>
+<% } %>
+
+<% if (config.analytics && config.analytics.cloudflare){ %>
+  <% if (config.analytics.cloudflare.token){ %>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "<%= config.analytics.cloudflare.token %>"}'></script>
+  <% } %>
+<% } %>
+
+<% if (config.analytics && config.analytics.bing){ %>
+  <% if (config.analytics.bing.site_verification){ %>
+    <meta name="msvalidate.01" content="<%= config.analytics.bing.site_verification %>"/>
+  <% } %>
+<% } %>
+
+
+<% if (config.analytics && config.analytics.baidu){ %>
+  <% if (config.analytics.baidu.disable_transformation) { %>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <% } %>
+  <% if (config.analytics.baidu.site_verification){ %>
+    <meta name="baidu-site-verification" content="<%= config.analytics.baidu.site_verification %>"/>
+  <% } %>
+  <% if (config.analytics.baidu.id){ %>
+    <script type="text/javascript">
+      var _hmt = _hmt || []
+      ;(function () {
+        var hm = document.createElement('script')
+        hm.src = 'https://hm.baidu.com/hm.js?<%= config.analytics.baidu.id %>'
+        var s = document.getElementsByTagName('script')[0]
+        s.parentNode.insertBefore(hm, s)
+      })()
+    </script>
+  <% } %>
+<% } %>
+
+<% if (config.analytics && config.analytics.umami){ %>
+  <% if (config.analytics.umami.id && config.analytics.umami.host){ %>
+    <script async defer data-website-id="<%= config.analytics.umami.id %>" src="<%= config.analytics.umami.host %>/umami.js"></script>
+  <% } %>
+<% } %>

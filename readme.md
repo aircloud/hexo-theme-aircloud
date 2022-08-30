@@ -30,6 +30,7 @@ Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心
     * [评论功能](https://github.com/aircloud/hexo-theme-aircloud#%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD)
     * [favicon 的配置](https://github.com/aircloud/hexo-theme-aircloud#%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2--%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2)
     * [底部自定义](https://github.com/aircloud/hexo-theme-aircloud#%E5%BA%95%E9%83%A8%E8%87%AA%E5%AE%9A%E4%B9%89)
+    * [站长统计](https://github.com/aircloud/hexo-theme-aircloud#%E7%AB%99%E9%95%BF%E7%BB%9F%E8%AE%A1)
 * [高级自定义](https://github.com/aircloud/hexo-theme-aircloud#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B)
     * [首行缩进](https://github.com/aircloud/hexo-theme-aircloud#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B)
 * [常见问题](https://github.com/aircloud/hexo-theme-aircloud#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
@@ -222,6 +223,36 @@ friends: [
 ```
 
 最底部的 PV、UV 和模版地址，无需配置。
+
+### 站长统计
+
+如果不想包括某些统计平台，直接注释或删除相关代码即可。
+
+```yml
+analytics:
+  google:
+    # https://search.google.com
+    site_verification:
+    # https://analytics.google.com
+    gtag_id:
+  bing:
+    # https://www.bing.com/webmasters
+    site_verification:
+  baidu:
+    # https://ziyuan.baidu.com/site/index
+    site_verification:
+    # https://tongji.baidu.com
+    id:
+    # https://ziyuan.baidu.com/college/courseinfo?id=156&page=4#h2_article_title1
+    disable_transformation: false
+  cloudflare:
+    # https://dash.cloudflare.com
+    token:
+  umami:
+    # https://umami.is/
+    host:
+    id:
+```
 
 ## 高级自定义
 

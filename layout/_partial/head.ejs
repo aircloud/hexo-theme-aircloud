@@ -1,7 +1,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:description" content="<%= config.description %>">
     <meta property="og:type" content="website">
@@ -24,4 +23,6 @@
     <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
     <!-- ga & ba script hoook -->
     <script></script>
+
+    <%- partial('_partial/analytics', null, {cache: false}) %>
 </head>
