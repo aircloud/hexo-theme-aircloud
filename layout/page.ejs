@@ -1,0 +1,11 @@
+
+<div class="post-content <% if(config.post_style && !config.post_style.indent) {%>no-indent<% } %>">
+    <%-page.content%>
+    <% if(config.donate){%>
+        <%- partial('_partial/donate', null, {cache: false}) %>
+    <% } %>
+    <div id="comment-container"></div>
+    <div id="disqus_thread"></div>
+    <div class="giscus"></div>
+    <div id="lv-container"></div>
+</div>
