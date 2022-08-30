@@ -20,8 +20,11 @@
     <!-- Custom CSS -->
     <%- css('css/aircloud.css') %>
     <%- css('css/gitment.css') %>
-    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
-    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+
+    <% (config.icon_urls || theme.icon_urls).forEach(function(url) { %>
+    <link href="<%= url %>" rel="stylesheet" type="text/css">
+    <% }) %>
+
     <!-- ga & ba script hoook -->
     <script></script>
 </head>

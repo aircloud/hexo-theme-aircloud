@@ -29,7 +29,8 @@ Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心
     * [`标签`页面 & `关于`页面](https://github.com/aircloud/hexo-theme-aircloud#%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2--%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2)
     * [评论功能](https://github.com/aircloud/hexo-theme-aircloud#%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD)
     * [favicon 的配置](https://github.com/aircloud/hexo-theme-aircloud#%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2--%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2)
-    * [底部自定义](https://github.com/aircloud/hexo-theme-aircloud#%E5%BA%95%E9%83%A8%E8%87%AA%E5%AE%9A%E4%B9%89)
+    * [导航栏与社交平台](https://github.com/aircloud/hexo-theme-aircloud#%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%B8%8E%E7%A4%BE%E4%BA%A4%E5%B9%B3%E5%8F%B0)
+    * [友情链接](https://github.com/aircloud/hexo-theme-aircloud#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5)
 * [高级自定义](https://github.com/aircloud/hexo-theme-aircloud#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B)
     * [首行缩进](https://github.com/aircloud/hexo-theme-aircloud#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B)
 * [常见问题](https://github.com/aircloud/hexo-theme-aircloud#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
@@ -181,26 +182,53 @@ comment:
 
 项目的 favicon 默认在你的博客根目录的 `/source/img` 下面，在 `/source/img` 下面添加 favicon.ico 即可，不要添加在主题文件夹内。
 
-### 底部自定义
+### 导航栏与社交平台
 
-大家如果访问提供的预览链接，会发现我们的博客底部是提供一些内容的：一些社交平台的个人主页链接、友情链接、PV、UV 与 本模版链接。
+在 `_config.yml` 中
 
-一般情况下，大家无需改动底部的代码，直接在 `_config.yml` 中配置即可。
+如果主题中与根目录中同时存在相关配置，则以根目录配置为准。
 
-配置社交平台主页的样例代码：
+如果不想包括某些导航栏或社交平台，直接注释或删除相关代码即可。
 
+#### 修改图标地址
+
+```yml
+icon_urls:
+  # 默认地址 iconfont 开头的
+  - //at.alicdn.com/t/font_620856_28hi1hpxx24.css
+  # 自定义地址
+  - //cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css
 ```
+
+#### 导航自定义
+
+```yml
+navs: [
+  { title: '主页', icon: 'iconfont icon-shouye1' },
+  { title: '标签', url: '/tags', icon: 'iconfont icon-biaoqian1' },
+  { title: '存档', url: '/archives', icon: 'iconfont icon-guidang2' },
+  { title: '收藏', url: '/collect', icon: 'iconfont icon-shoucang1' },
+  { title: '关于', url: '/about', icon: 'iconfont icon-guanyu2' },
+  { title: '测试图标', url: 'https://icons.getbootstrap.com/', icon: 'bi bi-emoji-smile' },
+]
+```
+
+#### 社交平台
+
+```yml
 # SNS settings
 # 一些社交平台地址，支持以下几种：
-weibo_username:     3286578617
-zhihu_username:     ai-er-lan-xue-da
-github_username:    AirCloud
-twitter_username:   iconie_alloy
-facebook_username:  xiaotao.nie.5
-linkedin_username:  小涛-聂-80964aba
+sns:
+  'iconfont icon-weibo': http://weibo.com/username
+  'iconfont icon-twitter': https://twitter.com/username
+  'iconfont icon-zhihu': https://www.zhihu.com/people/username
+  'iconfont icon-facebook': https://www.facebook.com/username
+  'iconfont icon-github': https://github.com/username
+  'iconfont icon-linkedin': https://www.linkedin.com/in/username
+  'bi bi-youtube': https://youtube.com/in/username
 ```
 
-如果不想包括某些社交平台，直接注释或删除相关代码即可（目前暂不支持在不改动模版代码的前提下新增社交平台）。
+### 友情链接
 
 配置友情链接的样例代码：
 
