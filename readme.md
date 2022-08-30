@@ -30,13 +30,14 @@ Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心
     * [评论功能](https://github.com/aircloud/hexo-theme-aircloud#%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD)
     * [favicon 的配置](https://github.com/aircloud/hexo-theme-aircloud#%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2--%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2)
     * [底部自定义](https://github.com/aircloud/hexo-theme-aircloud#%E5%BA%95%E9%83%A8%E8%87%AA%E5%AE%9A%E4%B9%89)
+    * [站长统计](https://github.com/aircloud/hexo-theme-aircloud#%E7%AB%99%E9%95%BF%E7%BB%9F%E8%AE%A1)
 * [高级自定义](https://github.com/aircloud/hexo-theme-aircloud#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B)
     * [首行缩进](https://github.com/aircloud/hexo-theme-aircloud#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B)
 * [常见问题](https://github.com/aircloud/hexo-theme-aircloud#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
     * [如何取消赞赏功能？](https://github.com/aircloud/hexo-theme-aircloud#%E5%A6%82%E4%BD%95%E5%8F%96%E6%B6%88%E8%B5%9E%E8%B5%8F%E5%8A%9F%E8%83%BD)
 * [一些注意事项](https://github.com/aircloud/hexo-theme-aircloud#%E4%B8%80%E4%BA%9B%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)    
 
-## 基本使用    
+## 基本使用
 
 **建议：参考 [DEMO](https://github.com/aircloud/hexo-aircloud-blog) 进行配置，尤其是 _config.yml 部分，否则可能会造成功能缺失**
 
@@ -223,6 +224,36 @@ friends: [
 
 最底部的 PV、UV 和模版地址，无需配置。
 
+### 站长统计
+
+如果不想包括某些统计平台，直接注释或删除相关代码即可。
+
+```yml
+analytics:
+  google:
+    # https://search.google.com
+    site_verification:
+    # https://analytics.google.com
+    gtag_id:
+  bing:
+    # https://www.bing.com/webmasters
+    site_verification:
+  baidu:
+    # https://ziyuan.baidu.com/site/index
+    site_verification:
+    # https://tongji.baidu.com
+    id:
+    # https://ziyuan.baidu.com/college/courseinfo?id=156&page=4#h2_article_title1
+    disable_transformation: false
+  cloudflare:
+    # https://dash.cloudflare.com
+    token:
+  umami:
+    # https://umami.is/
+    host:
+    id:
+```
+
 ## 高级自定义
 
 ### 首行缩进
@@ -243,7 +274,7 @@ avatar_style:
 
 ## 常见问题
 
-###  如何取消赞赏功能？
+### 如何取消赞赏功能？
 
 目前网站的赞赏功能做的比较鸡肋，缺乏一定的丰富度，如果你想取消这个功能，只需取消注释或者删除掉赞赏部分的相关配置即可：
 
