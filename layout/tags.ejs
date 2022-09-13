@@ -1,3 +1,5 @@
+<% page.comments = false %>
+
 <div id='tag_cloud' class="tags">
     <% site.tags.map(a => a.name).sort((a, b) => {
         return a.localeCompare(b, 'zh-Hans-CN', {sensitivity: 'accent'})
