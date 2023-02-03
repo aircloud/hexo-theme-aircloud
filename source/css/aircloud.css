@@ -84,10 +84,18 @@ body {
 .no-indent h3,
 .no-indent h4,
 .no-indent h5,
-.no-indent h6,
+.no-indent h6 {
+  text-indent: 0 !important;
+}
 .no-indent ul,
 .no-indent ol {
-  text-indent: 0 !important;
+  text-indent: 2em !important;
+}
+.no-indent ul ul,
+.no-indent ol ul,
+.no-indent ul ol,
+.no-indent ol ol {
+  text-indent: 4em !important;
 }
 .no-indent ul,
 .no-indent ol {

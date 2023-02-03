@@ -92,8 +92,14 @@ body {
 
 .no-indent{
   text-indent: 0 !important;
-  p,h1,h2,h3,h4,h5,h6,ul,ol{
+  p,h1,h2,h3,h4,h5,h6{
     text-indent: 0 !important;
+  }
+  ul, ol {
+    text-indent: 2em !important;
+    ul, ol {
+      text-indent: 4em !important;
+    }
   }
   ul,ol{
     padding-left: 0 !important;
