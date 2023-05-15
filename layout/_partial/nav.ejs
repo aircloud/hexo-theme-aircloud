@@ -2,7 +2,7 @@
 <div class="nav" id="nav">
     <div class="avatar-name">
         <div class="avatar <% if(config.avatar_style && config.avatar_style.radius) {%>radius<% } %>">
-            <img src="<%= config['root'] %><%= config['sidebar-avatar'] %>" />
+            <img src="<%=theme.avatar%>" class="js-avatar show" />
         </div>
         <div class="name">
             <i><%= config.author %></i>
